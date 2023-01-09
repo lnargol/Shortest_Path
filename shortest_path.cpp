@@ -439,7 +439,7 @@ vector<vector<int64_t>> bellman_ford(const graph &g, const uint64_t &source)
     // Stage 1: Initialization
     for (uint64_t i = 0; i < vertices; i++)
     {
-        dist.at(i) = numeric_limits<int>::max();
+        dist.at(i) = numeric_limits<int64_t>::max();
         pred.at(i) = -1;
     }
     dist.at(source) = 0;
@@ -553,7 +553,7 @@ vector<vector<int64_t>> dijkstra(const graph &g, const uint64_t &source)
     // Stage 1
     for (uint64_t i = 0; i < vertices; i++)
     {
-        dist.at(i) = numeric_limits<int>::max();
+        dist.at(i) = numeric_limits<int64_t>::max();
         pred.at(i) = -1;
         unvisited.push_back(i);
     }
@@ -565,7 +565,7 @@ vector<vector<int64_t>> dijkstra(const graph &g, const uint64_t &source)
 
     while (!unvisited.empty())
     {
-        current_dist = numeric_limits<int>::max();
+        current_dist = numeric_limits<int64_t>::max();
 
         // find the vertex with minimum distance
         for (uint64_t i = 0; i < unvisited.size(); i++)
@@ -600,7 +600,7 @@ vector<vector<int64_t>> dijkstra(const graph &g, const uint64_t &source)
 
         for (uint64_t i = 0; i < unvisited.size(); i++)
         {
-            if (dist.at(unvisited.at(i)) == numeric_limits<int>::max())
+            if (dist.at(unvisited.at(i)) == numeric_limits<int64_t>::max())
             {
                 infinity_count++;
             }
@@ -691,7 +691,7 @@ void floyd_warshall(const graph &g, ofstream &out)
     {
         for (uint64_t j = 0; j < vertices; j++)
         {
-            dist[i][j] = numeric_limits<int>::max();
+            dist[i][j] = numeric_limits<int64_t>::max();
         }
     }
 
