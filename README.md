@@ -66,9 +66,7 @@ Getters and Setters have been written for this class for the attributes to be ac
 
 * In more advanced version of this algorithm, a min heap is used as a priority queue for finding the vertex with minimum distance and this enhances the algorithm's performance. 
 
-<p align="center">
-    <img src="dijkstra.png" alt="drawing" width="200" height="600"/>
-</p>
+
 ## Floyd Warshall
 
 * Unlike Bellman Ford and Dijkstra, Floyd Warshall is not a single source shortest path algorithm and is designed to find all shortest paths between all the vertices. The algorithm does this by comparing all possible paths through the graph between each pair of vertices. Floyd Warshall is an example of dynamic programming.
